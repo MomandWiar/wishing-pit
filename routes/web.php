@@ -23,8 +23,8 @@ Route::prefix('wishlist')->group(function ()
         return view('wishes.createWish');
     });
 
-    Route::get('/wish-edit/{id}', 'WishController@read');
-    Route::get('/wish-delete/{id}', 'WishController@delete');
+    Route::get('/wish-edit/{id}', 'WishController@edit');
+    Route::get('/wish-delete/{id}', 'WishController@destroy');
 
     Route::post('/createWish/create', 'WishController@create');
     Route::post('/wish-edit/{id}/update', 'WishController@update');

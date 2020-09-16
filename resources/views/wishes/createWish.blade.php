@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <form method="post" action="{{ url()->current() . '/create' }}">
+    <form method="post" action="{{ url()->current() . '/create' }}" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="naam">Enter Wish Name</label>

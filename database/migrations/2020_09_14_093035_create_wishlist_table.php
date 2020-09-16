@@ -17,7 +17,7 @@ class CreateWishlistTable extends Migration
             $table->bigIncrements('id');
             $table->string('naam');
             $table->text('beschrijving');
-            $table->mediumText('plaatje');
+            $table->string('plaatje');
             $table->string('prijs');
             $table->timestamps();
         });

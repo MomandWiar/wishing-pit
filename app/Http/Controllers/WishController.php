@@ -10,10 +10,11 @@ class WishController extends Controller
 {
     public function create(StoreWishRequest $request)
     {
-        Wish::create($request->all());
+        $wish = Wish::create($request->all());
+
+        $this->storeImage($wish);
 
         return redirect('/wishlist');
-
     }
 
     public function show()
@@ -25,7 +26,7 @@ class WishController extends Controller
         );
     }
 
-    public function read()
+    public function edit()
     {
         return view('wishes.editWish',
             [
@@ -36,15 +37,29 @@ class WishController extends Controller
 
     public function update(StoreWishRequest $request)
     {
-        Wish::where('id', Request('id'))->update($request->except(['_token']));
+        $wish = Wish::where('id', Request('id'))->update($request->except(['_token']));
+
+        $this->storeImage($wish);
 
         return redirect('/wishlist');
     }
 
-    public function delete()
+    public function destroy()
     {
         Wish::where('id', Request('id'))->delete();
 
         return redirect('/wishlist');
+    }
+
+    public function storeImage($wish)
+    {
+        if (request()->has('plaatje'))
+        {
+            $wish->update(
+                [
+                    'plaatje' => request()->plaatje->store('uploads', 'public')
+                ]
+            );
+        }
     }
 }

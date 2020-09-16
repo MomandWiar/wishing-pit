@@ -26,8 +26,8 @@ class storeWishRequest extends FormRequest
         return [
             'naam' => 'required|max:50',
             'beschrijving' => 'required|max:100',
-            'plaatje' => 'required',
-            'prijs' =>'required|regex:[0-9]+[.,]?[0-9]*'
+            'plaatje' => 'required|file|image|max:5000',
+            'prijs' =>'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/'
         ];
     }
 
@@ -36,7 +36,8 @@ class storeWishRequest extends FormRequest
         return [
             'naam.required' => 'Naam ontbreekt.',
             'beschrijving.required' => 'Beschrijving is niet ingevuld.',
-            'plaatje.required' => 'Plaatje is niet correct.',
+            'plaatje.file' => 'Plaatje is niet correct.',
+            'plaatje.required' => 'Plaatje is verplicht.',
             'prijs.required' => 'Prijs is niet ingevuld',
             'prijs.regex:/^[0-9]+(\.[0-9][0-9]?)?$/' => 'Prijs mag alles cijfers en komma bevatten'
         ];
