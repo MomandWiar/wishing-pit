@@ -12,18 +12,29 @@
 <body>
     <div class="container">
 
-        {{-- page header--}}
+        {{--page header--}}
+        @include('partials.header')
 
-        @if (str_contains(url()->current(), '/wishlist'))
-            @include('partials.headerWishlist')
-        @else
-            @include('partials.header')
+        {{--page title--}}
+        <h1 class="font-weight-bold">
+            @yield('pageTitle')
+        </h1>
+
+        {{--error message--}}
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul class="m-0">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         @endif
 
-        {{-- page content--}}
+        {{--page content--}}
         @yield('content')
 
-        {{-- page footer--}}
+        {{--page footer--}}
         @include('partials.footer')
 
     </div>

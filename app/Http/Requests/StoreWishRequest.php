@@ -27,7 +27,7 @@ class storeWishRequest extends FormRequest
             'naam' => 'required|max:50',
             'beschrijving' => 'required|max:100',
             'plaatje' => 'required',
-            'prijs' =>'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/'
+            'prijs' =>'required|regex:[0-9]+[.,]?[0-9]*'
         ];
     }
 

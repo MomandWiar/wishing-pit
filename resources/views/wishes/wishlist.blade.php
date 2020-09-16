@@ -1,10 +1,8 @@
 @extends('layout.app')
 
-@section('content')
+@section('pageTitle', 'Wistlist')
 
-    <h1 class="font-weight-bold">
-        Wistlist
-    </h1>
+@section('content')
 
     <div>
         @foreach($wishes as $wish)

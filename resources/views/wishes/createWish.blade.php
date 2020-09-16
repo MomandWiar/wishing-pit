@@ -1,20 +1,8 @@
 @extends('layout.app')
 
+@section('pageTitle', 'Create Wish')
+
 @section('content')
-
-    <h1 class="font-weight-bold">
-        Create Wish
-    </h1>
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul class="m-0">
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     <form method="post" action="{{ url()->current() . '/create' }}">
         @csrf

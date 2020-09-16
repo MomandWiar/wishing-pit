@@ -12,6 +12,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('wishlist') }}">Wishlist</a>
                 </li>
+                @if (str_contains(url()->current(), '/wishlist'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('wishlist/createWish') }}">add Wish</a>
+                    </li>
+                @endif()
             </ul>
         </div>
     </nav>
