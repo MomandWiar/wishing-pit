@@ -3,8 +3,12 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-
-class storeWishRequest extends FormRequest
+//TODO fix naming: ModelNaamManerRequest -> WishStoreRequest
+/*
+ * Ashua from the watertribe ~ [ Check ]
+ * please remove this comment..
+ */
+class StoreWishRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,23 +27,36 @@ class storeWishRequest extends FormRequest
      */
     public function rules()
     {
+        // TODO fix spacing
+        // 'a'      => 'a|b|c',
+        // 'aaaaaa' => 'a|b|c',
+        /*
+         * Ashua from the watertribe ~ [ Check ]
+         * please remove this comment..
+         */
         return [
-            'naam' => 'required|max:50',
-            'beschrijving' => 'required|max:100',
-            'plaatje' => 'required|file|image|max:5000',
-            'prijs' =>'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/'
+            'naam'          => 'required|max:50',
+            'beschrijving'  => 'required|max:100',
+            'plaatje'       => 'required|file|image|max:5000',
+            'prijs'         =>'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/'
         ];
     }
 
+    // TODO REMOVE THIS BOIY!!!!!!!!! check resource/lang/validation.php
+    /*
+     * Ashua from the watertribe ~ [ Check ]
+     * please remove this comment..
+     */
+
+    /**
+     * Custom error messages
+     *
+     * @return array
+     */
     public function messages()
     {
         return [
-            'naam.required' => 'Naam ontbreekt.',
-            'beschrijving.required' => 'Beschrijving is niet ingevuld.',
-            'plaatje.file' => 'Plaatje is niet correct.',
-            'plaatje.required' => 'Plaatje is verplicht.',
-            'prijs.required' => 'Prijs is niet ingevuld',
-            'prijs.regex:/^[0-9]+(\.[0-9][0-9]?)?$/' => 'Prijs mag alles cijfers en komma bevatten'
+            'prijs.regex'   => 'Prijs mag alles cijfers en komma bevatten'
         ];
     }
 }

@@ -2,56 +2,79 @@
 
 namespace App\Http\Controllers;
 
-use App\Wish;
+use App\Http\Services\WishService;
 use App\Http\Requests\StoreWishRequest;
-use Illuminate\Http\Request;
+use App\Wishes;
 
+/**
+ * Class WishController
+ * @package App\Http\Controllers
+ */
 class WishController extends Controller
 {
-    public function create(StoreWishRequest $request)
+    /**
+     * @var WishService
+     */
+    private $wishService;
+
+    /**
+     * WishController constructor.
+     * @param WishService $wishService
+     */
+    public function __construct(WishService $wishService)
     {
-        $wish = Wish::create($request->all());
+        $this->wishService = $wishService;
+    }
+
+    /**
+     * stores a wish
+     *
+     * @param StoreWishRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function store(StoreWishRequest $request)
+    {
+        $wish = $this->wishService->store($request->validated());
 
         $this->storeImage($wish);
 
-        return redirect('/wishlist');
+        return redirect('/wish/show');
     }
 
-    public function show()
+    /**
+     * updates a wish
+     *
+     * @param StoreWishRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function update(Wishes $wish, StoreWishRequest $request)
     {
-        return view('wishes.wishlist',
-            [
-                'wishes' => Wish::all()
-            ]
-        );
-    }
-
-    public function edit()
-    {
-        return view('wishes.editWish',
-            [
-                'wishes' => Wish::where('id', Request('id'))->first()
-            ]
-        );
-    }
-
-    public function update(StoreWishRequest $request)
-    {
-        $wish = Wish::where('id', Request('id'))->update($request->except(['_token']));
+        $wish = $this->wishService->update($wish, $request->validated());
 
         $this->storeImage($wish);
 
-        return redirect('/wishlist');
+        return redirect('/wish/show');
     }
+//todo @momo
 
-    public function destroy()
+    /**
+     * deletes a wish
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function delete(Wishes $wish)
     {
-        Wish::where('id', Request('id'))->delete();
+        $this->wishService->delete($wish);
 
-        return redirect('/wishlist');
+        return redirect('/wish/show');
     }
 
-    public function storeImage($wish)
+    /**
+     * stores an image
+     *
+     * @param $wish
+     */
+    private function storeImage($wish)
     {
         if (request()->has('plaatje'))
         {

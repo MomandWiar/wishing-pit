@@ -2,13 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3e9911-bd83-4fc3-a028-4e4c594884b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/WishService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/View/Composers/WishesComposer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Wishes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/partials/navigation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreWishRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreWishRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishlist_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishlist_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Wish.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishlist_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wishes/createWish.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wishes/createWish.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wishes/wishlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wishes/wishlist.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/error.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/wishes/createWish.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/wishes/editWish.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/wishes/wishlist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -184,7 +195,10 @@
       <workItem from="1600111916498" duration="1119000" />
       <workItem from="1600113057797" duration="2817000" />
       <workItem from="1600167797961" duration="17137000" />
-      <workItem from="1600254828912" duration="9351000" />
+      <workItem from="1600254828912" duration="13122000" />
+      <workItem from="1600334920650" duration="14278000" />
+      <workItem from="1600422725339" duration="9274000" />
+      <workItem from="1600436043985" duration="7999000" />
     </task>
     <servers />
   </component>
@@ -196,7 +210,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -206,8 +222,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/wishes/wishlist.blade.php</url>
+          <url>file://$PROJECT_DIR$/resources/views/wish/show.blade.php</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php</url>
+          <line>161</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

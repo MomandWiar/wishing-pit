@@ -13,8 +13,13 @@
             </li>
             <li>{{ $wish->beschrijving }}</li>
             <li>{{ $wish->prijs }}</li>
-            <a href="{{ url('/wishlist/wish-edit', $wish->id) }}">Edit</a>
-            <a href="{{ url('/wishlist/wish-delete', $wish->id) }}">Delete</a>
+            <a href="{{ url('/wish/edit', $wish->id) }}">Edit</a>
+
+            <form method="post" action="{{ url('/wish/delete', $wish->id) }}" enctype="multipart/form-data">
+                @csrf
+                {{ method_field('DELETE') }}
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         </ul>
         @endforeach()
     <div>

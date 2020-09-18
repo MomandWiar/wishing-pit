@@ -11,22 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::view('/', 'home');
 
-Route::prefix('wishlist')->group(function ()
-{
-    Route::get('/', 'WishController@show');
+Route::prefix('wish')->group(function () {
 
-    Route::get('/createWish', function () {
-        return view('wishes.createWish');
-    });
+    Route::view('/show', 'wish.show');
 
-    Route::get('/wish-edit/{id}', 'WishController@edit');
-    Route::get('/wish-delete/{id}', 'WishController@destroy');
+    Route::view('/create', 'wish.create');
+    Route::post('/create/store', 'WishController@store');
 
-    Route::post('/createWish/create', 'WishController@create');
-    Route::post('/wish-edit/{id}/update', 'WishController@update');
+    Route::view('/edit/{wish}', 'wish.edit');
+    Route::post('/edit/{wish}/update', 'WishController@update');
+
+    Route::delete('/delete/{wish}', 'WishController@delete');
+
 });
 
