@@ -12,7 +12,9 @@
                 <img src="{{ asset('storage/' . $wish->plaatje) }}" alt="plaatje" class="img-thumbnail">
             </li>
             <li>{{ $wish->beschrijving }}</li>
-            <li>{{ $wish->prijs }}</li>
+            <li>
+                <a href="{{ url($wish->link) }}">{{ $wish->prijs }}</a>
+            </li>
             <a href="{{ url('/wish/edit', $wish->id) }}">Edit</a>
 
             <form method="post" action="{{ url('/wish/delete', $wish->id) }}" enctype="multipart/form-data">

@@ -27,27 +27,14 @@ class StoreWishRequest extends FormRequest
      */
     public function rules()
     {
-        // TODO fix spacing
-        // 'a'      => 'a|b|c',
-        // 'aaaaaa' => 'a|b|c',
-        /*
-         * Ashua from the watertribe ~ [ Check ]
-         * please remove this comment..
-         */
         return [
             'naam'          => 'required|max:50',
             'beschrijving'  => 'required|max:100',
             'plaatje'       => 'required|file|image|max:5000',
-            'prijs'         =>'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/'
+            'link'          => 'required|string',
+            'prijs'         => 'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/'
         ];
     }
-
-    // TODO REMOVE THIS BOIY!!!!!!!!! check resource/lang/validation.php
-    /*
-     * Ashua from the watertribe ~ [ Check ]
-     * please remove this comment..
-     */
-
     /**
      * Custom error messages
      *

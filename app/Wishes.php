@@ -27,6 +27,7 @@ class Wishes extends Model
         'naam',
         'beschrijving',
         'plaatje',
+        'link',
         'prijs'
     ];
 

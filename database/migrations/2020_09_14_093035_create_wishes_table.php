@@ -18,6 +18,7 @@ class CreateWishesTable extends Migration
             $table->string('naam');
             $table->text('beschrijving');
             $table->string('plaatje');
+            $table->string('link');
             $table->string('prijs');
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
