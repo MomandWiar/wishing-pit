@@ -10,8 +10,7 @@ class WishComposer
     /**
      * @param View $view
      */
-    public function compose(View $view
-    )
+    public function compose(View $view)
     {
         $view->with('wish', Wishes::where('id', request('wish'))->first());
     }

@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd3e9911-bd83-4fc3-a028-4e4c594884b1" name="Default Changelist" comment="" />
+    <list default="true" id="fd3e9911-bd83-4fc3-a028-4e4c594884b1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/les1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/les1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreWishRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreWishRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/WishService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/WishService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/View/Composers/WishComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/View/Composers/WishComposer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/View/Composers/WishesComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/View/Composers/WishesComposer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/wish/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/wish/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/wish/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +78,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
@@ -109,6 +133,7 @@
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hHLU2qzsfLL9tagd6ZicS5eH7a" />
@@ -116,16 +141,18 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../les2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Momand Wiar\PhpstormProjects\les1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Momand Wiar\PhpstormProjects\php_school\Periode 7\les1\resources\views\wistlist" />
       <recent name="C:\Users\Momand Wiar\PhpstormProjects\php_school\Periode 7\les1\public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Momand Wiar\PhpstormProjects\wishing-pit\app\Http\Controllers" />
+      <recent name="C:\Users\Momand Wiar\PhpstormProjects\wishing-pit\database\migrations" />
+      <recent name="C:\Users\Momand Wiar\PhpstormProjects\les1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -191,6 +218,19 @@
       <workItem from="1600687274366" duration="317000" />
       <workItem from="1600782548826" duration="749000" />
       <workItem from="1601277700202" duration="2285000" />
+      <workItem from="1601285165318" duration="593000" />
+      <workItem from="1601290088703" duration="976000" />
+      <workItem from="1601458859008" duration="1851000" />
+      <workItem from="1601461317005" duration="863000" />
+      <workItem from="1601462211416" duration="2039000" />
+      <workItem from="1601464832480" duration="779000" />
+      <workItem from="1601889005332" duration="617000" />
+      <workItem from="1603702039833" duration="985000" />
+      <workItem from="1603708166372" duration="2848000" />
+      <workItem from="1603785420553" duration="5023000" />
+      <workItem from="1603891461502" duration="1943000" />
+      <workItem from="1603919997320" duration="3308000" />
+      <workItem from="1604239141015" duration="678000" />
     </task>
     <servers />
   </component>

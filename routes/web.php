@@ -17,13 +17,17 @@ Route::prefix('wish')->group(function () {
 
     Route::view('/show', 'wish.show');
 
-    Route::view('/create', 'wish.create');
+    Route::view('/create', 'wish.create')->middleware('auth');
     Route::post('/create/store', 'WishController@store');
 
-    Route::view('/edit/{wish}', 'wish.edit');
+    Route::view('/edit/{wish}', 'wish.edit')->middleware('auth');
     Route::post('/edit/{wish}/update', 'WishController@update');
 
     Route::delete('/delete/{wish}', 'WishController@delete');
 
 });
+
+Auth::routes();
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 

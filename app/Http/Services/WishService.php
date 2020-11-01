@@ -42,6 +42,19 @@ class WishService
     }
 
     /**
+     * @param Wishes $wish
+     * @return bool
+     */
+    public function storeImage(Wishes $wish)
+    {
+        return $wish->update(
+            [
+                'plaatje' => $wish->plaatje->store('uploads', 'public')
+            ]
+        );
+    }
+
+    /**
      * Save Model in the database.
      * @param Wishes $wish
      * @param array $data

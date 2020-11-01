@@ -18,6 +18,10 @@
             <label for="prijs">Prijs</label>
             <input type="text" class="form-control" id="prijs"  name="prijs" placeholder="Prijs" value="{{ $wish->prijs }}">
         </div>
+        <div>
+            <label for="link">Link</label>
+            <input type="text" class="form-control" id="link" name="link" placeholder="Link" value="{{ $wish->link }}">
+        </div>
         <div class="form-group">
             <label for="plaatje">Plaatje</label>
             <input type="file" class="form-control-file" id="plaatje" name="plaatje" accept="image/*" >

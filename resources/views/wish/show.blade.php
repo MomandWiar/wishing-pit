@@ -15,6 +15,7 @@
             <li>
                 <a href="{{ url($wish->link) }}">{{ $wish->prijs }}</a>
             </li>
+            @if (Auth::check())
             <a href="{{ url('/wish/edit', $wish->id) }}">Edit</a>
 
             <form method="post" action="{{ url('/wish/delete', $wish->id) }}" enctype="multipart/form-data">
@@ -22,6 +23,7 @@
                 {{ method_field('DELETE') }}
                 <button type="submit" class="btn btn-danger">Delete</button>
             </form>
+            @endif()
         </ul>
         @endforeach()
     <div>

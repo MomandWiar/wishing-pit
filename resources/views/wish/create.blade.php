@@ -27,6 +27,8 @@
             <input type="file" class="form-control-file" id="plaatje" name="plaatje">
         </div>
 
+        <input type="hidden" class="form-control" id="persoon_id" name="persoon_id" value="{{ Auth::user()->id }}">
+
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 

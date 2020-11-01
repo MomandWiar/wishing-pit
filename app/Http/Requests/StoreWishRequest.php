@@ -32,7 +32,7 @@ class StoreWishRequest extends FormRequest
             'beschrijving'  => 'required|max:100',
             'plaatje'       => 'required|file|image|max:5000',
             'link'          => 'required|string',
-            'prijs'         => 'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/'
+            'prijs'         => 'required|regex:/^[0-9]+(\.[0-9][0-9]?)?$/',
         ];
     }
     /**

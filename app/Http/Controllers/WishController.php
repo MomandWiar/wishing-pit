@@ -24,6 +24,7 @@ class WishController extends Controller
     public function __construct(WishService $wishService)
     {
         $this->wishService = $wishService;
+        $this->middleware('auth');
     }
 
     /**
@@ -36,7 +37,7 @@ class WishController extends Controller
     {
         $wish = $this->wishService->store($request->validated());
 
-        $this->storeImage($wish);
+        $this->wishService->storeImage($wish);
 
         return redirect('/wish/show');
     }
@@ -51,11 +52,10 @@ class WishController extends Controller
     {
         $wish = $this->wishService->update($wish, $request->validated());
 
-        $this->storeImage($wish);
+        $this->wishService->storeImage($wish);
 
         return redirect('/wish/show');
     }
-//todo @momo
 
     /**
      * deletes a wish
@@ -70,19 +70,16 @@ class WishController extends Controller
     }
 
     /**
-     * stores an image
+     * stores a image
      *
-     * @param $wish
+     * @param Wish $wish
      */
-    private function storeImage($wish)
+    public function storeImage(Wish $wish)
     {
-        if (request()->has('plaatje'))
-        {
-            $wish->update(
-                [
-                    'plaatje' => request()->plaatje->store('uploads', 'public')
-                ]
-            );
-        }
+        $wish->update(
+            [
+                'plaatje' => $wish->plaatje->store('uploads', 'public')
+            ]
+        );
     }
 }
