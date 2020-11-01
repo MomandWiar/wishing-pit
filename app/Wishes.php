@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class Wishes
@@ -28,7 +29,8 @@ class Wishes extends Model
         'beschrijving',
         'plaatje',
         'link',
-        'prijs'
+        'prijs',
+        'user_id'
     ];
 
     /**
@@ -37,4 +39,13 @@ class Wishes extends Model
     protected $dates = [
         'deleted_at'
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($query) {
+            $query->user_id = auth::id();
+        });
+    }
 }

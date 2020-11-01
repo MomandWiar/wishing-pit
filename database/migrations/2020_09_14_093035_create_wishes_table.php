@@ -20,6 +20,7 @@ class CreateWishesTable extends Migration
             $table->string('plaatje');
             $table->string('link');
             $table->string('prijs');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
             $table->softDeletes('deleted_at', 0);
         });

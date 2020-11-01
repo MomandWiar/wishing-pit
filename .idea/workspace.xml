@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd3e9911-bd83-4fc3-a028-4e4c594884b1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/les1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/les1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreWishRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreWishRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/WishService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/WishService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/View/Composers/WishComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/View/Composers/WishComposer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/View/Composers/WishesComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/View/Composers/WishesComposer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/partials/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wish/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wish/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wish/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Wishes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Wishes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishes_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -230,7 +215,8 @@
       <workItem from="1603785420553" duration="5023000" />
       <workItem from="1603891461502" duration="1943000" />
       <workItem from="1603919997320" duration="3308000" />
-      <workItem from="1604239141015" duration="678000" />
+      <workItem from="1604239141015" duration="2983000" />
+      <workItem from="1604243814137" duration="3494000" />
     </task>
     <servers />
   </component>

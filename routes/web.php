@@ -27,6 +27,8 @@ Route::prefix('wish')->group(function () {
 
 });
 
+Route::get('/admin', 'AdminController@admin')->middleware('is_admin');
+
 Auth::routes();
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

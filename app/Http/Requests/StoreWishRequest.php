@@ -3,10 +3,10 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-//TODO fix naming: ModelNaamManerRequest -> WishStoreRequest
-/*
- * Ashua from the watertribe ~ [ Check ]
- * please remove this comment..
+
+/**
+ * Class StoreWishRequest
+ * @package App\Http\Requests
  */
 class StoreWishRequest extends FormRequest
 {
