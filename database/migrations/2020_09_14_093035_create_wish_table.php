@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWishesTable extends Migration
+class CreateWishTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateWishesTable extends Migration
      */
     public function up()
     {
-        Schema::create('wishes', function (Blueprint $table) {
+        Schema::create('wish', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('naam');
             $table->text('beschrijving');
@@ -33,6 +33,6 @@ class CreateWishesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wishes');
+        Schema::dropIfExists('wish');
     }
 }

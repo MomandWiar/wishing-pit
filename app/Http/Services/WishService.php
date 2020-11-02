@@ -2,7 +2,7 @@
 
 namespace App\Http\Services;
 
-use App\Wishes;
+use App\Wish;
 
 /**
  * Class WishService
@@ -15,16 +15,16 @@ class WishService
      */
     public function store(array $data) {
         return $this->save(
-            new Wishes,
+            new Wish,
             $data
         );
     }
 
     /**
-     * @param Wishes $wish
+     * @param Wish $wish
      * @param array $data
      */
-    public function update(Wishes $wish, array $data) {
+    public function update(Wish $wish, array $data) {
         return $this->save(
             $wish,
             $data
@@ -32,20 +32,20 @@ class WishService
     }
 
     /**
-     * @param Wishes $wish
+     * @param Wish $wish
      * @return bool|null
      * @throws \Exception
      */
-    public function delete(Wishes $wish)
+    public function delete(Wish $wish)
     {
         return $wish->delete();
     }
 
     /**
-     * @param Wishes $wish
+     * @param Wish $wish
      * @return bool
      */
-    public function storeImage(Wishes $wish)
+    public function storeImage(Wish $wish)
     {
         return $wish->update(
             [
@@ -56,11 +56,11 @@ class WishService
 
     /**
      * Save Model in the database.
-     * @param Wishes $wish
+     * @param Wish $wish
      * @param array $data
-     * @return Wishes
+     * @return Wish
      */
-    private function save(Wishes $wish, array $data){
+    private function save(Wish $wish, array $data){
         $wish->fill($data);
         $wish->save();
 

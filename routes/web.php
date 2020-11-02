@@ -20,14 +20,16 @@ Route::prefix('wish')->group(function () {
     Route::view('/create', 'wish.create')->middleware('auth');
     Route::post('/create/store', 'WishController@store');
 
-    Route::view('/edit/{wish}', 'wish.edit')->middleware('auth');
-    Route::post('/edit/{wish}/update', 'WishController@update');
+    Route::group(['middleware' => 'can:view,wish'], function() {
+
+        Route::get('/edit/{wish}', 'WishController@edit');
+        Route::post('/edit/{wish}/update', 'WishController@update');
+
+    });
 
     Route::delete('/delete/{wish}', 'WishController@delete');
 
 });
-
-Route::get('/admin', 'AdminController@admin')->middleware('is_admin');
 
 Auth::routes();
 

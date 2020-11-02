@@ -2,7 +2,7 @@
 
 namespace App\Http\View\Composers;
 
-use App\Wishes;
+use App\Wish;
 use Illuminate\View\View;
 
 class WishComposer
@@ -12,6 +12,6 @@ class WishComposer
      */
     public function compose(View $view)
     {
-        $view->with('wish', Wishes::where('id', request('wish'))->first());
+        $view->with('wishes', Wish::all());
     }
 }

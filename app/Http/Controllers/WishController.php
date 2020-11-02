@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\WishService;
 use App\Http\Requests\StoreWishRequest;
-use App\Wishes;
+use App\Wish;
 
 /**
  * Class WishController
@@ -28,7 +28,7 @@ class WishController extends Controller
     }
 
     /**
-     * stores a wish
+     * store a wish
      *
      * @param StoreWishRequest $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
@@ -43,12 +43,24 @@ class WishController extends Controller
     }
 
     /**
-     * updates a wish
+     * edit a wish
+     *
+     * @param Wish $wish
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function edit(Wish $wish)
+    {
+        return view('wish.edit', compact('wish'));
+    }
+
+    /**
+     * update a wish
      *
      * @param StoreWishRequest $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function update(Wishes $wish, StoreWishRequest $request)
+    public function update(Wish $wish, StoreWishRequest $request)
     {
         $wish = $this->wishService->update($wish, $request->validated());
 
@@ -58,28 +70,14 @@ class WishController extends Controller
     }
 
     /**
-     * deletes a wish
+     * delete a wish
      *
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
-    public function delete(Wishes $wish)
+    public function delete(Wish $wish)
     {
         $this->wishService->delete($wish);
 
         return redirect('/wish/show');
-    }
-
-    /**
-     * stores a image
-     *
-     * @param Wish $wish
-     */
-    public function storeImage(Wish $wish)
-    {
-        $wish->update(
-            [
-                'plaatje' => $wish->plaatje->store('uploads', 'public')
-            ]
-        );
     }
 }

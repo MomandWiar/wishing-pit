@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Auth;
  * Class Wishes
  * @package App
  */
-class Wishes extends Model
+class Wish extends Model
 {
     use SoftDeletes;
 
     /**
      * @var string
      */
-    protected $table = 'wishes';
+    protected $table = 'wish';
 
     /**
      * The attributes that are mass assignable.
@@ -30,7 +30,7 @@ class Wishes extends Model
         'plaatje',
         'link',
         'prijs',
-        'user_id'
+        'user_id',
     ];
 
     /**
@@ -40,6 +40,9 @@ class Wishes extends Model
         'deleted_at'
     ];
 
+    /**
+     * default value for user_id
+     */
     protected static function boot()
     {
         parent::boot();

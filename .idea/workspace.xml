@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="fd3e9911-bd83-4fc3-a028-4e4c594884b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WishController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/StoreWishRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/StoreWishRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Wishes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Wishes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/IsAdmin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/WishService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/WishService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/View/Composers/WishComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/View/Composers/WishComposer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/View/Composers/WishesComposer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/NavigationServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/NavigationServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Wishes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Wish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wishes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_14_093035_create_wish_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/wish/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wish/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -216,7 +222,9 @@
       <workItem from="1603891461502" duration="1943000" />
       <workItem from="1603919997320" duration="3308000" />
       <workItem from="1604239141015" duration="2983000" />
-      <workItem from="1604243814137" duration="3494000" />
+      <workItem from="1604243814137" duration="6117000" />
+      <workItem from="1604253451705" duration="11262000" />
+      <workItem from="1604316966466" duration="3032000" />
     </task>
     <servers />
   </component>
